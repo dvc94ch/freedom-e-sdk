@@ -96,13 +96,13 @@ PROGRAM ?= $(DEFAULT_PROGRAM)
 PROGRAM_DIR = $(srcdir)/software/$(PROGRAM)
 PROGRAM_ELF = $(srcdir)/software/$(PROGRAM)/$(PROGRAM)
 
-.PHONY: software_clean
-software_clean:
-	$(MAKE) -C $(PROGRAM_DIR) clean
+#.PHONY: software_clean
+#software_clean:
+#	$(MAKE) -C $(PROGRAM_DIR) clean
 
-.PHONY: software
-software: software_clean
-	$(MAKE) -C $(PROGRAM_DIR)
+#.PHONY: software
+#software: software_clean
+#	$(MAKE) -C $(PROGRAM_DIR)
 
 dasm: software	
 	$(toolchain_dest)/bin/riscv32-unknown-elf-objdump -D $(PROGRAM_ELF)
