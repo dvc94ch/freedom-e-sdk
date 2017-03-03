@@ -135,7 +135,7 @@ run_gdb:
 
 run_debug:
 	$(OPENOCD) $(OPENOCDARGS) &
-	$(GDB) $(PROGRAM_DIR)/$(PROGRAM) $(GDBARGS) $(GDBCMDS)
+	$(GDB) $(PROGRAM_ELF) $(GDBARGS) $(GDBCMDS)
 
 .PHONY: clean
 clean:
